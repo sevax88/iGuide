@@ -2,20 +2,22 @@
 <html class=" js no-touch csstransforms csstransitions" xmlns="http://www.w3.org/1999/xhtml"><head><style type="text/css">.gm-style .gm-style-mtc label,.gm-style .gm-style-mtc div{font-weight:400}</style><style type="text/css">.gm-style-pbc{transition:opacity ease-in-out;background-color:black;text-align:center}.gm-style-pbt{font-size:22px;color:white;font-family:Roboto,Arial,sans-serif;position:relative;margin:0;top:50%;-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%);transform:translateY(-50%)}</style><link href="iGuide_files/css_003.css" rel="stylesheet" type="text/css"><style type="text/css">.gm-style .gm-style-cc span,.gm-style .gm-style-cc a,.gm-style .gm-style-mtc div{font-size:10px}</style><style type="text/css">@media print {  .gm-style .gmnoprint, .gmnoprint {    display:none  }}@media screen {  .gm-style .gmnoscreen, .gmnoscreen {    display:none  }}</style><style type="text/css">.gm-style{font-family:Roboto,Arial,sans-serif;font-size:11px;font-weight:400;text-decoration:none}.gm-style img{max-width:none}</style>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>iGuide</title>
-
 <link href="iGuide_files/css_002.css" rel="stylesheet" type="text/css">
 <link href="iGuide_files/css.css" rel="stylesheet" type="text/css">
 <link href="iGuide_files/style.css" rel="stylesheet" type="text/css">
 <link href="iGuide_files/elastislide.css" rel="stylesheet" type="text/css">
 <script style="" async="" src="iGuide_files/cbgapi_002.js"></script><script async="" src="iGuide_files/cbgapi.js"></script><script gapi_processed="true" src="iGuide_files/plusone.js" async="" type="text/javascript"></script><script gapi_processed="true" src="iGuide_files/plusone.js" async="" type="text/javascript"></script><script gapi_processed="true" src="iGuide_files/plusone.js" async="" type="text/javascript"></script><script gapi_processed="true" src="iGuide_files/plusone.js" async="" type="text/javascript"></script><script src="iGuide_files/widgets.js" id="twitter-wjs"></script><script src="iGuide_files/analytics.js" async=""></script><script src="iGuide_files/js.js"></script>
 
-<script src="iGuide_files/common.js" charset="UTF-8" type="text/javascript"></script><script src="iGuide_files/map.js" charset="UTF-8" type="text/javascript"></script><script src="iGuide_files/util.js" charset="UTF-8" type="text/javascript"></script><script src="iGuide_files/marker.js" charset="UTF-8" type="text/javascript"></script><script src="iGuide_files/button.js" async="" charset="utf-8" type="text/javascript"></script><script src="iGuide_files/onion.js" charset="UTF-8" type="text/javascript"></script><script src="iGuide_files/stats.js" charset="UTF-8" type="text/javascript"></script><script src="iGuide_files/controls.js" charset="UTF-8" type="text/javascript"></script>
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
 
-</head>
+<script src="iGuide_files/common.js" charset="UTF-8" type="text/javascript"></script><script src="iGuide_files/map.js" charset="UTF-8" type="text/javascript"></script><script src="iGuide_files/util.js" charset="UTF-8" type="text/javascript"></script><script src="iGuide_files/marker.js" charset="UTF-8" type="text/javascript"></script><script src="iGuide_files/onion.js" charset="UTF-8" type="text/javascript"></script><script src="iGuide_files/button.js" async="" charset="utf-8" type="text/javascript"></script><script src="iGuide_files/ViewportInfoService_002.js" charset="UTF-8" type="text/javascript"></script><script src="iGuide_files/stats.js" charset="UTF-8" type="text/javascript"></script><script src="iGuide_files/controls.js" charset="UTF-8" type="text/javascript"></script><script src="iGuide_files/ViewportInfoService.js" charset="UTF-8" type="text/javascript"></script><script src="iGuide_files/AuthenticationService.js" charset="UTF-8" type="text/javascript"></script><script src="iGuide_files/vt_002.js" charset="UTF-8" type="text/javascript"></script><script src="iGuide_files/vt.js" charset="UTF-8" type="text/javascript"></script></head>
+
 <body>
 
 <nav class="menu">
-  <ul class="nav">
+   <ul class="nav">
     <li class="logo"><a href="#section1"></a></li>
     <li class="active"><a href="#section2">¿Qué es iGuide?</a></li>
     <li class=""><a href="#section3">¿Como funciona iGuide?</a></li>
@@ -136,10 +138,14 @@
   </article>
 </section>
 <section class="conquienes" id="section5">
-  <article class="inicio">
-    <div>
+
+
+ <article class="inicio">
+   <div>
           <h1>Tecnología</h1>
     </div>
+  <div class="map activemap" id="buenosairesmap" style="position: absolute; background-color: rgb(229, 227, 223); overflow: hidden;"></div>
+  <div class="map" id="miamimap" style="position: relative; background-color: rgb(229, 227, 223); overflow: hidden;">
   </br>
     <div>
        <p class="text">Para la implementación de nuestro sistema utilizamos distintas tecnolgías tras un análisis técnico exhaustivo y alalal</p>
@@ -179,27 +185,25 @@
   </article>
 </section>
 
-<script type="text/javascript">
+            <!-- Place this tag after the last +1 button tag. --> 
+            <script type="text/javascript">
   (function() {
     var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
     po.src = 'https://apis.google.com/js/plusone.js';
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
   })();
 </script> 
-       
-      <p class="separado">&nbsp;</p>
-     
-
-<!-- Place this tag after the last +1 button tag. --> 
-<script type="text/javascript">
+        
+        
+            <!-- Place this tag after the last +1 button tag. --> 
+            <script type="text/javascript">
   (function() {
     var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
     po.src = 'https://apis.google.com/js/plusone.js';
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
   })();
 </script> 
-
-<script type="text/javascript" src="iGuide_files/jquery_003.js"></script><iframe tabindex="-1" style="width: 1px; height: 1px; position: absolute; top: -100px;" src="iGuide_files/postmessageRelay.html" id="oauth2relay728909184" name="oauth2relay728909184"></iframe> 
+<script type="text/javascript" src="iGuide_files/jquery_003.js"></script> 
 <script type="text/javascript" src="iGuide_files/jquery-ui.js"></script> 
 <script src="iGuide_files/modernizr.js"></script> 
 <script type="text/javascript" src="iGuide_files/jquery_002.js"></script> 
@@ -223,4 +227,4 @@
       
 </script>
 
-<iframe style="position: absolute; visibility: hidden; display: none; width: 0px; height: 0px; padding: 0px; border: medium none;" allowfullscreen="true" allowtransparency="true" scrolling="no" id="rufous-sandbox" frameborder="0"></iframe></body></html>
+</body></html>

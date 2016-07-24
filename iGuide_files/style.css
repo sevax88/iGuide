@@ -775,14 +775,6 @@ section.donde article.inicio div h1 {
     font-weight: 300;
 }
 
-section.donde .map{
-    width:100%;
-    height:350px;
-    opacity: 0;
-	}
-section.donde .activemap{
-    opacity: 1;
-}
 section.donde .legend {
     width: 100px;
     height: 27px;
