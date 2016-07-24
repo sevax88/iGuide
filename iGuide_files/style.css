@@ -725,6 +725,12 @@ section.conquienes article h2{
 	font-weight:100;
 }
 
+section.que article div div.derecha {
+	float:left;
+	padding-left:80px;
+	width:40%;
+}
+
 section.conquienes article div.logos {
 	width:942px;
 	display:block;
