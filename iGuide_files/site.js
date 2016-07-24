@@ -85,84 +85,6 @@ workingSpace.managers = function(){
     }
     return oPublic;
 }();
-workingSpace.googleMaps = function() {
-    var createMapObj = function(elementId, coords) {
-        return{
-            map: null,
-            canvas: document.getElementById(elementId),
-            coords: coords,
-            name: elementId
-        }
-    }
-    /*var iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
-    var icon = {
-            form: iconBase + 'schools_maps.png',
-            shadow: iconBase + 'schools_maps.shadow.png'
-    } */
-    var icon = { form: 'img/pointer.png' }
-    var map_options = function(latLng) {
-        return {
-            center: latLng,
-            zoom: 16,
-            mapTypeId: google.maps.MapTypeId.ROADMAP,
-            styles: [
-                {
-                    featureType: "all",
-                    stylers: [
-                        { saturation: -80 }
-                    ]
-                },{
-                    featureType: "road.arterial",
-                    elementType: "geometry",
-                    stylers: [
-                        { hue: "#00ffee" },
-                        { saturation: 50 }
-                    ]
-                },{
-                    featureType: "poi.business",
-                    elementType: "labels",
-                    stylers: [
-                        { visibility: "off" }
-                    ]
-                },{
-                    featureType: 'water',
-                    elementType: 'geometry.fill',
-                    stylers: [
-                        { color: '#adc9b8' }
-                    ]
-                }
-            ]
-        }
-    }
-
-    var createGoogleMap = function(mapObj) {
-        mapObj.map = new google.maps.Map(mapObj.canvas, map_options(mapObj.coords));
-        var marker = new google.maps.Marker({
-            position: mapObj.coords,
-            icon: icon.form /*,
-            shadow: {
-                url: icon.shadow,
-                anchor: new google.maps.Point(16, 34)
-            }*/,
-            map: mapObj.map
-        });
-        //marker.setAnimation(google.maps.Animation.BOUNCE);
-        mapObj.map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(
-            document.getElementById(mapObj.name + 'legend'));
-        return mapObj;
-    }
-
-    var buenosaires = createGoogleMap(createMapObj('buenosairesmap', new google.maps.LatLng(-34.570861,-58.443943)));
-    var miami = createGoogleMap(createMapObj('miamimap', new google.maps.LatLng(25.878261,-80.167669)));
-
-    buenosaires.map.setOptions({draggable: false, zoomControl: false, scrollwheel: false, disableDoubleClickZoom: true});
-    miami.map.setOptions({draggable: false, zoomControl: false, scrollwheel: false, disableDoubleClickZoom: true});
-
-    return {
-        buenosairesmap: buenosaires.map,
-        miamimap: miami.map
-    }
-}();
 workingSpace.principal = function() {
     var map = workingSpace.managers.initObjCollection(".city li","active");
     var section = workingSpace.managers.initObjCollection("section","active");
@@ -228,26 +150,7 @@ workingSpace.principal = function() {
         workingSpace.options.isSimplePageSlice ? slicePageSimple(currentHref) : slicePageComplex(currentHref);
         event.preventDefault();
     });
-    var hideAllMaps = function() {
-        var l = map.collection.length;
-        for(var i = 0; i < l; i++){
-            workingSpace.managers.removeClass(map.collection[i], map.activeClass, true);
-            workingSpace.managers.removeClass(map.collection[i] + "map", map.activeClass + "map", true);
-            //$(map.collection[i] + "map").hide();
-        }
-    }
-    var mapDisplay = function(element) {
-        hideAllMaps();
-        workingSpace.managers.addClass(element, map.activeClass);
-        workingSpace.managers.addClass(element + "map", map.activeClass + "map");
-        //$(element + "map").show();
-    }
-
-    $.each(map.collection, function(index, value) {
-        $(value).click( function(){
-            mapDisplay("#" + this.id);
-        });
-    });
+    
 
     $.each(section.collection, function(index, value){
         $(value).waypoint(function(direction) {
