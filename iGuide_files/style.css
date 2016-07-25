@@ -284,6 +284,7 @@ section.home article.inicio {
 	/*background-color:#000;*/
 	background-image: url('subte_background.jpg');
 	background-position: 0px center, 100px center;
+	background-size: 100%;
 	background-repeat: no-repeat;
 	height:448px;
     width:100%;
